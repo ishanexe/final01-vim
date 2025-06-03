@@ -1,0 +1,256 @@
+*{
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* *************** Nav Bar *************** */
+li a i.fa-envelope {
+  font-size: 20px; /* or bigger, like 32px, 40px */
+  color: #000; /* optional, change icon color */
+}
+
+nav{
+    height: 10vh;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.663);
+    z-index: 3;
+    position: sticky;
+    top: 0;
+}
+#ham-menu{
+    display: none;
+}
+
+.logo img{
+    margin-left: 5vw;
+    height: 6vh;
+
+    width: 150px; /* Adjust as needed: try 150-200px for a standard size */
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+.nav-elements{
+    width: 40vw;
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 5vw;
+}
+.nav-elements a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 1vw;
+}
+.nav-elements button{
+    padding: 0.75vw 1.5vw;
+    border: none;
+    color: white;
+    background-color: navy;
+    border-radius: 1vw;
+    cursor: pointer;
+}
+
+/* *************** Main - Home Page *************** */
+
+.home-pg-main {
+    /* Remove the old background image styles */
+    background-color: rgb(94, 204, 255); /* fallback if video doesn't load */
+    background-size: 100% 100%; /* can keep or remove */
+    height: 80vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* hide video overflow */
+}
+
+.home-pg-main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    background: rgba(0, 0, 0, 0.45); /* dark overlay on top of video */
+    z-index: 1;
+}
+
+.bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 0;  /* behind the overlay (::before) and content */
+    object-fit: cover;
+}
+
+.main-heading {
+    position: relative;
+    z-index: 2; /* above ::before overlay */
+    padding: 40px;
+    text-align: center;
+}
+
+
+.main-heading{
+    z-index: 2;
+    margin-left: 18vw;
+}
+.main-heading h1{
+    font-size: 3vw;
+    font-weight: 700;
+}
+.home-pg-main button{
+    padding: 0.85vw 3vw;
+    background-color: transparent;
+    border: 2px solid white;
+    font-weight: 600;
+    border-radius: 5vw;
+    color: white;
+    margin-top: 2vh;
+    font-size: 1.2vw;
+    cursor: pointer;
+}
+
+/* *************** about - Section *************** */
+.about{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5vh 2vw;
+}
+.about-txt{
+    flex-grow: 1;
+    padding: 0 4vw 0 2vw;
+    text-align: justify;
+}
+.about-txt h2{
+    font-weight: 700;
+    color: gray;
+    margin-bottom: 2vh;
+    font-size: 2.2vw;
+}
+.about-txt p{
+    margin-bottom: 2.5vh;
+    font-weight: 300
+}
+.about-img img{
+    height: 20vw;
+}
+
+/* *************** Product - Section *************** */
+.product-section{
+    background-color: #F6F7F6;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5vh 3vw;
+}
+.product-name{
+    width: 20vw;
+    height: 10vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product-name a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 1.2vw;
+}
+.product-name i{
+    font-size: 1.7vw;
+    margin-right: 10px;
+}
+
+/* *************** Footer - Section *************** */
+.footer{
+    display: flex;
+    align-items: center;
+    padding: 3vw 5vw;
+    background-color: #F6F7F6;
+    justify-content: space-between;
+    font-size: 1.2vw;
+}
+.footer span{
+    height: 2.5vw;
+    width: 2.5vw;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0.5vw;
+}
+.footer .footer-contact-icon{
+    display: flex;
+}
+
+/* *************** Company-info - Section *************** */
+.company-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #F6F7F6;
+    padding: 5.2vh 10vw;
+    text-align: center;
+}
+.company-info .numbers{
+    font-size: 3vw;
+    font-weight: 700;
+    color: #6699cc;
+}
+.company-info .domain{
+    font-size: 1.2vw;
+}
+
+
+/* Scrollbar Track */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+
+/* Scrollbar Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(128, 128, 128, 0.538); /* Gray color */
+    border-radius: 0; /* Makes it rectangular */
+}
+
+/* Scrollbar Background */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light background */
+}
+
+
+.ham-menu-mobile{
+    z-index: 5;
+    display: none;
+    background-color: black;
+    width: 25vw;
+    padding: 1vh 1vw 1.5vh 3.5vw;
+    border-radius: 2vw;
+}
+.ham-menu-mobile ul{
+    list-style: none;
+}
+.ham-menu-mobile ul li a{
+    text-decoration: none;
+    color: white;
+}
